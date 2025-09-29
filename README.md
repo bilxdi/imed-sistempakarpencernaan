@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect</title>
+    <title>Sistem Pakar Diagnosa Penyakit Pencernaan - Informatika Medik 2025</title>
     <meta http-equiv="refresh" content="0; URL=https://bilxdi.github.io/imed-sistempakarpencernaan/Dashboard.html">
 </head>
 <body>

@@ -1,4 +1,4 @@
-<title>Sistem Pakar Diagnosa Penyakit Pencernaan - Informatika Medik 2025</title>
+<h2>Sistem Pakar Diagnosa Penyakit Pencernaan - Informatika Medik 2025</h2>
 <meta http-equiv="refresh" content="0; URL=https://bilxdi.github.io/imed-sistempakarpencernaan/Dashboard.html">
 <p><a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="42" height="42" /></a>
 <a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="42" height="42" /></a>

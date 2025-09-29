@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pakar Diagnosa Penyakit Pencernaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <span>🏥 Sistem Pakar Pencernaan</span>
+                </div>
+                <div class="nav-actions">
+                    <a href="Dashboard.html" class="btn btn-outline">
+                        🏠 Kembali ke Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Sistem Pakar Diagnosa Penyakit Pencernaan</h1>
+            <p>Selamat Datang di halaman diagnosa permasalahan pada pencernaan. </p>
+            <p>Pada halaman ini, kami menyediakan layanan Tele-diagnostik menggunakan metode Forward Chaining untuk membantu identifikasi masalah pencernaan kamu ^^</p><br>
+            <p><b>Catatan:</b> &nbsp;Silakan isi form di bawah ini dengan jujur dan lengkap untuk mendapatkan hasil diagnosa yang akurat.</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Peringatan Medis -->
+        <div class="card" style="border-left: 4px solid #dc3545; background-color: #fff5f5;">
+            <h3 style="color: #dc3545; margin-bottom: 15px;">⚠️ Peringatan Medis Penting</h3>
+            <p><strong>Aplikasi ini hanya untuk bantuan diagnosis awal dan tidak menggantikan konsultasi medis profesional.</strong></p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+                <li>Hasil diagnosis bersifat indikatif dan memerlukan konfirmasi dari tenaga medis</li>
+                <li>Segera hubungi dokter jika mengalami gejala berat atau darurat</li>
+                <li>Jangan menggunakan hasil ini sebagai dasar pengobatan mandiri</li>
+            </ul>
+        </div>
+
+        <!-- Petunjuk Penggunaan -->
+        <div class="card">
+            <h2 class="card-title">📋 Petunjuk Penggunaan</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>1. Isi Form Gejala</h3>
+                    <p>Jawab semua pertanyaan tentang gejala yang Anda alami dengan jujur dan akurat.</p>
+                </div>
+                <div class="info-card">
+                    <h3>2. Pilih Tingkat Keparahan</h3>
+                    <p>Tentukan tingkat keparahan setiap gejala sesuai dengan kondisi yang Anda rasakan.</p>
+                </div>
+                <div class="info-card">
+                    <h3>3. Dapatkan Diagnosis</h3>
+                    <p>Sistem akan menganalisis gejala dan memberikan diagnosis dengan tingkat keyakinan.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">🩺 Form Diagnosa</h2>
+            <p>Silakan jawab pertanyaan berikut sesuai dengan gejala yang Anda alami:</p>
+            
+            <!-- Progress Indicator -->
+            <div class="progress-indicator">
+                <div class="progress-header">
+                    <span class="progress-label">Progress Pengisian Form</span>
+                    <span id="form-progress">0/5</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="form-progress-bar" class="progress"></div>
+                </div>
+            </div>
+            
+            <form id="diagnosis-form">
+                <!-- Gejala 1: Nyeri Ulu Hati -->
+                <div class="symptom-item">
+                    <label class="symptom-question">
+                        1. Seberapa parah nyeri ulu hati yang Anda rasakan? <span class="required-field">*</span>
+                    </label>
+                    <select id="symptom1" name="symptom1" required>
+                        <option value="">-- Pilih tingkat keparahan --</option>
+                        <option value="0">Tidak ada nyeri</option>
+                        <option value="1">Nyeri ringan (tidak mengganggu aktivitas)</option>
+                        <option value="2">Nyeri sedang (sedikit mengganggu aktivitas)</option>
+                        <option value="3">Nyeri berat (sangat mengganggu aktivitas)</option>
+                    </select>
+                </div>
+
+                <!-- Gejala 2: Mual -->
+                <div class="symptom-item">
+                    <label class="symptom-question">
+                        2. Seberapa parah mual yang Anda rasakan? <span class="required-field">*</span>
+                    </label>
+                    <select id="symptom2" name="symptom2" required>
+                        <option value="">-- Pilih tingkat keparahan --</option>
+                        <option value="0">Tidak ada mual</option>
+                        <option value="1">Mual ringan (sesekali)</option>
+                        <option value="2">Mual sedang (sering terjadi)</option>
+                        <option value="3">Mual berat (hampir terus-menerus)</option>
+                    </select>
+                </div>
+
+                <!-- Gejala 3: Muntah -->
+                <div class="symptom-item">
+                    <label class="symptom-question">
+                        3. Seberapa sering Anda muntah? <span class="required-field">*</span>
+                    </label>
+                    <select id="symptom3" name="symptom3" required>
+                        <option value="">-- Pilih frekuensi muntah --</option>
+                        <option value="0">Tidak muntah</option>
+                        <option value="1">Muntah 1-2 kali</option>
+                        <option value="2">Muntah 3-5 kali</option>
+                        <option value="3">Muntah lebih dari 5 kali atau terus-menerus</option>
+                    </select>
+                </div>
+
+                <!-- Gejala 4: Diare -->
+                <div class="symptom-item">
+                    <label class="symptom-question">
+                        4. Seberapa parah diare yang Anda alami? <span class="required-field">*</span>
+                    </label>
+                    <select id="symptom4" name="symptom4" required>
+                        <option value="">-- Pilih kondisi BAB --</option>
+                        <option value="0">BAB normal</option>
+                        <option value="1">BAB cair 1-3 kali sehari</option>
+                        <option value="2">BAB cair 4-6 kali sehari</option>
+                        <option value="3">BAB cair lebih dari 6 kali sehari</option>
+                    </select>
+                </div>
+
+                <!-- Durasi Gejala -->
+                <div class="symptom-item">
+                    <label class="symptom-question">
+                        5. Sudah berapa lama Anda mengalami gejala ini? <span class="required-field">*</span>
+                    </label>
+                    <select id="duration" name="duration" required>
+                        <option value="">-- Pilih durasi gejala --</option>
+                        <option value="1">Kurang dari 24 jam</option>
+                        <option value="2">1-3 hari</option>
+                        <option value="3">Lebih dari 3 hari</option>
+                    </select>
+                </div>
+
+                <!-- Gejala Tambahan -->
+                <div class="additional-symptoms">
+                    <h4 class="additional-title">Gejala Tambahan (Opsional)</h4>
+                    <p>Centang jika Anda mengalami gejala berikut:</p>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="fever" name="fever" class="checkbox-input">
+                            <span>Demam</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="headache" name="headache" class="checkbox-input">
+                            <span>Sakit kepala</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="weakness" name="weakness" class="checkbox-input">
+                            <span>Lemas/lelah</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="bloating" name="bloating" class="checkbox-input">
+                            <span>Perut kembung</span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+            
+            <button id="diagnose-btn" class="btn btn-large btn-block" disabled>
+                🩺 Mulai Diagnosa
+            </button>
+            
+            <!-- Loading Indicator -->
+            <div id="loading" class="loading-indicator">
+                <div class="loading-spinner"></div>
+                <div class="loading-text">Sedang menganalisis gejala Anda...</div>
+            </div>
+        </div>
+        
+        <div id="result-section" class="result-section card" style="display: none;">
+            <h2 class="card-title">📋 Hasil Diagnosa</h2>
+            
+            <!-- Confidence Section -->
+            <div class="confidence-section">
+                <div class="confidence-header">
+                    <span class="confidence-label">Tingkat Keyakinan Diagnosis</span>
+                    <span id="confidence-text">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+            </div>
+
+            <!-- Diagnosis Result -->
+            <div id="diagnosis-result"></div>
+
+            <!-- Treatment Recommendation -->
+            <div id="treatment-recommendation"></div>
+
+            <!-- Recommendation Section -->
+            <div class="recommendation-section">
+                <div class="tab-container">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="hospital">🏥 Rumah Sakit</div>
+                        <div class="tab" data-tab="pharmacy">💊 Apotek</div>
+                    </div>
+                    
+                    <div id="hospital-tab" class="tab-content active">
+                        <div class="recommendation-card">
+                            <h4>🏥 Rumah Sakit & IGD Terdekat</h4>
+                            <p>Berdasarkan kondisi Anda, berikut rekomendasi rumah sakit dengan IGD terdekat di sekitar Purwokerto:</p>
+                            <ul class="recommendation-list" id="hospital-list">
+                                <!-- Daftar rumah sakit akan ditampilkan di sini -->
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div id="pharmacy-tab" class="tab-content">
+                        <div class="recommendation-card">
+                            <h4>💊 Apotek Terdekat</h4>
+                            <p>Berikut rekomendasi apotek terdekat di sekitar Purwokerto untuk mendapatkan obat yang diperlukan:</p>
+                            <ul class="recommendation-list" id="pharmacy-list">
+                                <!-- Daftar apotek akan ditampilkan di sini -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="restart-btn" class="btn btn-accent action-btn">🔄 Diagnosa Ulang</button>
+                <button id="print-btn" class="btn btn-info action-btn">🖨️ Cetak Hasil</button>
+                <a href="Dashboard.html" class="btn btn-outline action-btn">🏠 Kembali ke Dashboard</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sistem Pakar Diagnosa Penyakit Pencernaan. Dibuat untuk keperluan akademis.</p>
+            <p><em>Disclaimer: Aplikasi ini hanya untuk bantuan diagnosis awal. Selalu konsultasikan dengan dokter untuk diagnosis dan pengobatan yang tepat.</em></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

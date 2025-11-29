@@ -4,5 +4,5 @@ Aplikasi berbasis kecerdasan buatan yang meniru pengetahuan dan pengalaman seora
 <p>
   <a target="_blank" href="https://www.w3.org/html/" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="42" height="42" /></a>
   <a target="_blank" href="https://www.w3schools.com/css/" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="42" height="42" /></a>
-  <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="42" height="42" /></a>
+  <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" style="display: inline-block;"><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="javascript" width="42" height="42" /></a>
 </p>
